@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:vola_flutter/src/data/locals/i18n.dart';
+import 'package:vola_flutter/src/features/signin/presentation/signin_screen.dart';
 
 class LanguageWidget extends StatelessWidget {
   const LanguageWidget({super.key});
@@ -10,9 +11,7 @@ class LanguageWidget extends StatelessWidget {
     return DropdownButtonHideUnderline(
       child: DropdownButton<Locale>(
         value: context.locale,
-        icon: Container(
-          width: 12,
-        ),
+        icon: null,
         items: I18n.all.map(
           (locale) {
             final flag = I18n.getFlag(locale.languageCode);
@@ -28,7 +27,14 @@ class LanguageWidget extends StatelessWidget {
             );
           },
         ).toList(),
-        onChanged: (_) {},
+        onChanged: (locale) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SignInPage(title: ""),
+            ),
+          );
+        },
       ),
     );
   }
