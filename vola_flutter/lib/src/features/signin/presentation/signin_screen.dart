@@ -20,6 +20,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  bool isNavigator = false;
+
   @override
   Widget build(BuildContext context) {
     final isDark = VHelperFunctions.isDarkMode(context);
@@ -89,10 +91,12 @@ class _SignInPageState extends State<SignInPage> {
               height: 130,
             ),
           ),
-          const Positioned(
+          Positioned(
             right: 12,
             top: 232,
-            child: LanguageWidget(),
+            child: LanguageWidget(
+              navigator: isNavigator,
+            ),
           ),
         ],
       ),

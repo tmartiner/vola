@@ -99,7 +99,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       displayFullTextOnTap: false,
                       stopPauseOnTap: false,
                     ),
-                    const LanguageWidget(),
+                    const LanguageWidget(
+                      navigator: true,
+                    ),
                   ],
                 ),
               ),

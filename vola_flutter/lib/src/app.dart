@@ -4,7 +4,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:vola_flutter/src/config/values/color_theme.dart';
 import 'package:vola_flutter/src/features/feed_screen/presentation/feed_screen.dart';
 import 'package:vola_flutter/src/features/signin/presentation/signin_screen.dart';
-import 'package:vola_flutter/src/features/welcome/features/welcome_screen.dart';
+import 'package:vola_flutter/src/features/welcome/presentation/welcome_screen.dart';
 import 'package:vola_flutter/src/serverpod_client.dart';
 
 class App extends StatelessWidget {
