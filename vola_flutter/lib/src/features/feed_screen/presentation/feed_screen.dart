@@ -14,28 +14,30 @@ class FeedScreen extends StatefulWidget {
 class _FeedScreenState extends State<FeedScreen> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        ListTile(
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-          leading: CircularUserImage(
-            userInfo: sessionManager.signedInUser,
-            size: 42,
+    return Scaffold(
+      body: ListView(
+        children: [
+          ListTile(
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            leading: CircularUserImage(
+              userInfo: sessionManager.signedInUser,
+              size: 42,
+            ),
+            title: Text(sessionManager.signedInUser!.userName),
+            subtitle: Text(sessionManager.signedInUser!.email ?? ''),
           ),
-          title: Text(sessionManager.signedInUser!.userName),
-          subtitle: Text(sessionManager.signedInUser!.email ?? ''),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(16),
-          child: ElevatedButton(
-            onPressed: () {
-              sessionManager.signOut();
-            },
-            child: const Text('Sign out'),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: ElevatedButton(
+              onPressed: () {
+                sessionManager.signOut();
+              },
+              child: const Text('Sign out'),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

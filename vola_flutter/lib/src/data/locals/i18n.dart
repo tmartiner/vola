@@ -9,27 +9,71 @@ class I18n {
     const Locale('de'),
   ];
 
-  static Widget getFlag(String code) {
+  static Widget getFlag(String code, context) {
     switch (code) {
       case 'en':
-        return LanguageFlag(
-          language: Language.en, // OR Language.fromCode('ar')
-          height: 15,
+        return Column(
+          children: [
+            LanguageFlag(
+              language: Language.en, // OR Language.fromCode('ar')
+              height: 15,
+            ),
+            Text(
+              'UK',
+              style: TextStyle(
+                fontSize: 9.5,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+            ),
+          ],
         );
       case 'es':
-        return LanguageFlag(
-          language: Language.es, // OR Language.fromCode('ar')
-          height: 15,
+        return Column(
+          children: [
+            LanguageFlag(
+              language: Language.es, // OR Language.fromCode('ar')
+              height: 15,
+            ),
+            Text(
+              'ES',
+              style: TextStyle(
+                fontSize: 9.5,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+            ),
+          ],
         );
       case 'fr':
-        return LanguageFlag(
-          language: Language.fr, // OR Language.fromCode('ar')
-          height: 15,
+        return Column(
+          children: [
+            LanguageFlag(
+              language: Language.fr, // OR Language.fromCode('ar')
+              height: 15,
+            ),
+            Text(
+              'FR',
+              style: TextStyle(
+                fontSize: 9.5,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+            ),
+          ],
         );
       case 'de':
-        return LanguageFlag(
-          language: Language.de, // OR Language.fromCode('ar')
-          height: 15,
+        return Column(
+          children: [
+            LanguageFlag(
+              language: Language.de, // OR Language.fromCode('ar')
+              height: 15,
+            ),
+            Text(
+              'DE',
+              style: TextStyle(
+                fontSize: 9.5,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+            ),
+          ],
         );
       default:
         return LanguageFlag(
