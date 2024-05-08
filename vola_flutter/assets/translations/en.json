@@ -1,0 +1,11 @@
+{
+  "title": "Vola",
+  "welcometext": "Welcome to Vola!\n\nTo begin exploring our app, simply click on the email area. We look forward to seeing you soon!",
+  "@welcometext": {
+    "description": "A message with a parameter"
+  },
+  "feed_title": "Explore",
+  "@wfeed_explore": {
+    "description": "Title of the page"
+  }
+}
