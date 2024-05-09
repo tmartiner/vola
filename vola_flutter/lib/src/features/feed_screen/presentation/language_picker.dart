@@ -1,8 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:vola_flutter/src/data/locals/i18n.dart';
-import 'package:vola_flutter/src/features/signin/presentation/signin_screen.dart';
 import 'package:vola_flutter/src/utils/helpers/helper_functions.dart';
 
 class LanguageWidget extends StatefulWidget {
@@ -24,45 +23,53 @@ class _LanguageWidgetState extends State<LanguageWidget> {
     final isDark = VHelperFunctions.isDarkMode(context);
 
     return DropdownButtonHideUnderline(
-      child: DropdownButton<Locale>(
-        dropdownColor: isDark
-            ? Theme.of(context).colorScheme.tertiary
-            : Theme.of(context).colorScheme.tertiary,
-        value: context.locale,
-        borderRadius: BorderRadius.circular(20),
-        icon: const SizedBox(
-          width: 12,
+      child: DropdownButton2(
+        alignment: Alignment.center,
+        customButton: Icon(
+          IconsaxPlusBroken.setting_2,
+          size: 30,
+          color: isDark
+              ? Theme.of(context).colorScheme.primary
+              : Theme.of(context).colorScheme.primary,
         ),
-        items: I18n.all.map(
-          (locale) {
-            final flag = I18n.getFlag(locale.languageCode, context);
-
-            return DropdownMenuItem(
-              value: locale,
-              onTap: () {
-                context.setLocale(locale);
-              },
-              child: Container(
-                child: flag,
-              ),
-            );
-          },
-        ).toList(),
-        onChanged: (locale) {
-          if (locale != null) {
-            Get.updateLocale(context.locale);
-            if (widget.navigator) {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const SignInPage(title: ""),
-                ),
-              );
-            } else {
-              // Nichts tun
-            }
-          }
+        items: [
+          ...MenuItems.firstItems.map(
+            (item) => DropdownMenuItem<MenuItem>(
+              value: item,
+              alignment: Alignment.center,
+              child: MenuItems.buildItem(item, context),
+            ),
+          ),
+          const DropdownMenuItem<Divider>(enabled: false, child: Divider()),
+          ...MenuItems.secondItems.map(
+            (item) => DropdownMenuItem<MenuItem>(
+              value: item,
+              alignment: Alignment.center,
+              child: MenuItems.buildItem(item, context),
+            ),
+          ),
+        ],
+        onChanged: (value) {
+          MenuItems.onChanged(context, value! as MenuItem);
         },
+        dropdownStyleData: DropdownStyleData(
+          width: 58,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: isDark
+                ? Theme.of(context).colorScheme.tertiary
+                : Theme.of(context).colorScheme.tertiary,
+          ),
+          offset: const Offset(-14, -4),
+        ),
+        menuItemStyleData: MenuItemStyleData(
+          customHeights: [
+            ...List<double>.filled(MenuItems.firstItems.length, 36),
+            8,
+            ...List<double>.filled(MenuItems.secondItems.length, 40),
+          ],
+          padding: const EdgeInsets.only(left: 12, right: 12),
+        ),
       ),
     );
   }
