@@ -6,7 +6,7 @@ import 'package:serverpod_auth_email_flutter/serverpod_auth_email_flutter.dart';
 import 'package:vola_flutter/src/config/values/colors.dart';
 import 'package:vola_flutter/src/config/values/sizes.dart';
 import 'package:vola_flutter/src/config/values/text_strings.dart';
-import 'package:vola_flutter/src/features/feed_screen/presentation/language_picker.dart';
+import 'package:vola_flutter/src/features/feed_screen/presentation/settings_picker.dart';
 import 'package:vola_flutter/src/serverpod_client.dart';
 import 'package:vola_flutter/src/utils/helpers/helper_functions.dart';
 import 'package:simple_shadow/simple_shadow.dart';
@@ -112,7 +112,7 @@ class _SignInPageState extends State<SignInPage> {
                         Positioned(
                           right: 10,
                           top: 10,
-                          child: LanguageWidget(
+                          child: SettingsPicker(
                             navigator: isNavigator,
                             updateNavigator: (value) {
                               setState(() {

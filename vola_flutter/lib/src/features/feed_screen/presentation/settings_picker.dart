@@ -4,20 +4,20 @@ import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:vola_flutter/src/data/locals/i18n.dart';
 import 'package:vola_flutter/src/utils/helpers/helper_functions.dart';
 
-class LanguageWidget extends StatefulWidget {
+class SettingsPicker extends StatefulWidget {
   final bool navigator;
   final Function(bool) updateNavigator;
-  const LanguageWidget({
+  const SettingsPicker({
     super.key,
     required this.navigator,
     required this.updateNavigator,
   });
 
   @override
-  State<LanguageWidget> createState() => _LanguageWidgetState();
+  State<SettingsPicker> createState() => _SetingWidgetState();
 }
 
-class _LanguageWidgetState extends State<LanguageWidget> {
+class _SetingWidgetState extends State<SettingsPicker> {
   @override
   Widget build(BuildContext context) {
     final isDark = VHelperFunctions.isDarkMode(context);
