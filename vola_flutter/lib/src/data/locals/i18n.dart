@@ -1,16 +1,27 @@
 import 'package:dash_flags/dash_flags.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart'; // Importiere Get-Paket
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:vola_flutter/src/utils/helpers/helper_functions.dart';
+
+class LanguageController extends GetxController {
+  var selectedLanguage = 'en'.obs; // Standardmäßig auf Englisch setzen
+
+  void changeLanguage(String languageCode) {
+    selectedLanguage.value = languageCode;
+    // Setze die ausgewählte Sprache
+    EasyLocalization.of(Get.context!)!
+        .setLocale(Locale(languageCode))
+        .then((value) => Get.updateLocale(Get.context!.locale));
+  }
+}
 
 class I18n {
   static final List<Locale> allLocales = [
     const Locale('en'),
-    const Locale('es'),
     const Locale('fr'),
+    const Locale('es'),
     const Locale('de'),
   ];
 }
@@ -33,28 +44,28 @@ abstract class MenuItems {
     text: 'UK',
     icon: LanguageFlag(
       language: Language.en,
-      height: 15,
+      height: 20,
     ),
   );
   static final french = MenuItem(
     text: 'FR',
     icon: LanguageFlag(
       language: Language.fr,
-      height: 15,
+      height: 20,
     ),
   );
   static final spanish = MenuItem(
     text: 'ES',
     icon: LanguageFlag(
       language: Language.es,
-      height: 15,
+      height: 20,
     ),
   );
   static final german = MenuItem(
     text: 'DE',
     icon: LanguageFlag(
       language: Language.de,
-      height: 15,
+      height: 20,
     ),
   );
   static const mode = MenuItem(
@@ -86,7 +97,7 @@ abstract class MenuItems {
           Text(
             item.text,
             style: TextStyle(
-              fontSize: 9.5,
+              fontSize: 10,
               color: Theme.of(context).colorScheme.secondary,
             ),
           ),
@@ -103,7 +114,7 @@ abstract class MenuItems {
             child: Text(
               item.text,
               style: TextStyle(
-                fontSize: 9.5,
+                fontSize: 10,
                 color: Theme.of(context).colorScheme.secondary,
               ),
             ),
@@ -114,11 +125,16 @@ abstract class MenuItems {
   }
 
   static void onChanged(BuildContext context, MenuItem item) {
-    if (item == english ||
-        item == french ||
-        item == spanish ||
-        item == german) {
-      Get.updateLocale(context.locale);
+    final languageController = Get.put(
+        LanguageController()); // Erstellt und fügt den LanguageController in das GetX-System ein
+    if (item == english) {
+      languageController.changeLanguage(I18n.allLocales[0].toString());
+    } else if (item == french) {
+      languageController.changeLanguage(I18n.allLocales[1].toString());
+    } else if (item == spanish) {
+      languageController.changeLanguage(I18n.allLocales[2].toString());
+    } else if (item == german) {
+      languageController.changeLanguage(I18n.allLocales[3].toString());
     } else if (item == mode) {
       Get.changeThemeMode(
         Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,

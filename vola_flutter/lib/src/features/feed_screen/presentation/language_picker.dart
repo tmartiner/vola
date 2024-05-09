@@ -64,9 +64,9 @@ class _LanguageWidgetState extends State<LanguageWidget> {
         ),
         menuItemStyleData: MenuItemStyleData(
           customHeights: [
-            ...List<double>.filled(MenuItems.firstItems.length, 36),
+            ...List<double>.filled(MenuItems.firstItems.length, 46),
             8,
-            ...List<double>.filled(MenuItems.secondItems.length, 40),
+            ...List<double>.filled(MenuItems.secondItems.length, 50),
           ],
           padding: const EdgeInsets.only(left: 12, right: 12),
         ),
