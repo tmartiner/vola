@@ -1,13 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:serverpod_auth_email_flutter/serverpod_auth_email_flutter.dart';
 import 'package:vola_flutter/src/config/values/colors.dart';
 import 'package:vola_flutter/src/config/values/sizes.dart';
-import 'package:vola_flutter/src/config/values/text_strings.dart';
 import 'package:vola_flutter/src/features/feed_screen/presentation/settings_picker.dart';
-import 'package:vola_flutter/src/serverpod_client.dart';
+import 'package:vola_flutter/src/features/signin/presentation/widgets/signin_button.dart';
+import 'package:vola_flutter/src/serverdata/serverpod_client.dart';
 import 'package:vola_flutter/src/utils/helpers/helper_functions.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
@@ -37,75 +35,84 @@ class _SignInPageState extends State<SignInPage> {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: Sizes.p12),
+              padding: const EdgeInsets.symmetric(
+                horizontal: Sizes.p12,
+              ),
               child: Stack(
                 children: [
                   Container(
-                    padding: const EdgeInsets.only(top: 52),
+                    padding: const EdgeInsets.only(
+                        top: 52, bottom: 30, left: 8, right: 8),
+                    decoration: BoxDecoration(
+                      // color: Colors.amber,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                     child: Stack(
                       children: [
-                        Container(
-                          height: 440,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Theme.of(context)
-                                .colorScheme
-                                .secondaryContainer
-                                .withOpacity(0.8),
-                            boxShadow: [
-                              BoxShadow(
-                                color: isDark
-                                    ? vSecondaryColor.withOpacity(0.6)
-                                    : vSecondaryColor.withOpacity(0.4),
-                                offset: const Offset(0, 6),
-                                blurRadius: 10,
-                              ),
-                            ],
-                          ),
-                          padding: const EdgeInsets.all(Sizes.p12),
-                          child: Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                const Spacer(),
-                                const Spacer(),
-                                Text(
-                                  'welcometext'.tr(),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge!
-                                      .copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary,
-                                      ),
-                                ),
-                                const Spacer(),
-                                SignInWithEmailButton(
-                                  icon: Icon(
-                                    IconsaxPlusBroken.sms_tracking,
-                                    size: Sizes.p32,
-                                    color:
-                                        Theme.of(context).colorScheme.onPrimary,
-                                  ),
-                                  label: Text(
-                                    vFieldEmail,
+                        SimpleShadow(
+                          opacity: 0.6,
+                          color: isDark
+                              ? Theme.of(context).colorScheme.onSecondary
+                              : Theme.of(context).colorScheme.onTertiary,
+                          offset: const Offset(0, 6),
+                          sigma: 7,
+                          child: Container(
+                            height: 440,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .secondaryContainer
+                                  .withOpacity(0.8),
+                            ),
+                            padding: const EdgeInsets.all(Sizes.p12),
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  const Spacer(),
+                                  const Spacer(),
+                                  Text(
+                                    'welcometext'.tr(),
                                     style: Theme.of(context)
                                         .textTheme
-                                        .titleLarge!
+                                        .bodyLarge!
                                         .copyWith(
                                           color: Theme.of(context)
                                               .colorScheme
-                                              .onPrimary,
+                                              .secondary,
                                         ),
                                   ),
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        vPrimaryColor),
-                                  ),
-                                  caller: client.modules.auth,
-                                ),
-                              ],
+                                  const Spacer(),
+                                  SignInEmailButton(caller: client.modules.auth)
+                                  // SignInWithEmailButton(
+                                  //   icon: Icon(
+                                  //     IconsaxPlusBroken.sms_tracking,
+                                  //     size: Sizes.p32,
+                                  //     color: Theme.of(context)
+                                  //         .colorScheme
+                                  //         .onPrimary,
+                                  //   ),
+                                  //   label: Text(
+                                  //     vFieldEmail,
+                                  //     style: Theme.of(context)
+                                  //         .textTheme
+                                  //         .titleLarge!
+                                  //         .copyWith(
+                                  //           color: Theme.of(context)
+                                  //               .colorScheme
+                                  //               .onPrimary,
+                                  //         ),
+                                  //   ),
+                                  //   style: ButtonStyle(
+                                  //     backgroundColor:
+                                  //         MaterialStateProperty.all(
+                                  //             vPrimaryColor),
+                                  //   ),
+                                  //   caller: client.modules.auth,
+                                  // ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vola_flutter/src/app.dart';
 import 'package:vola_flutter/src/data/locals/i18n.dart';
-import 'package:vola_flutter/src/serverpod_client.dart';
+import 'package:vola_flutter/src/serverdata/serverpod_client.dart';
 
 void main() async {
   // Need to call this as SessionManager is using Flutter bindings before App is called.

@@ -27,14 +27,17 @@ dependencies:
 
   serverpod_flutter: 1.2.6
   vola_client:
-    path: ../vola_client
+    path:
+      ../vola_client
+
+      # Communication withd server
+  serverpod_auth_email_flutter: 1.2.6
+  serverpod_auth_shared_flutter: 1.2.6
+  serverpod_auth_client: 1.2.6
+  email_validator: ^2.1.17
 
   flutter_localizations:
     sdk: flutter
-
-  # Communication withd server
-  serverpod_auth_email_flutter: 1.2.6
-  serverpod_auth_shared_flutter: 1.2.6
 
   # App spezific needs
   flex_color_scheme: ^7.3.1

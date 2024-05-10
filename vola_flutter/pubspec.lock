@@ -178,7 +178,7 @@ packages:
     source: hosted
     version: "0.0.2"
   email_validator:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: email_validator
       sha256: e9a90f27ab2b915a27d7f9c2a7ddda5dd752d6942616ee83529b686fc086221b
@@ -686,7 +686,7 @@ packages:
     source: hosted
     version: "0.27.7"
   serverpod_auth_client:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: serverpod_auth_client
       sha256: e8a650415c0fc5d521691c7da920b51dbf46cadaeb56aec0f30bbcc60031b644

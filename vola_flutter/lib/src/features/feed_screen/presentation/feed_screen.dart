@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:serverpod_auth_shared_flutter/serverpod_auth_shared_flutter.dart';
-import 'package:vola_flutter/src/serverpod_client.dart';
+import 'package:vola_flutter/src/serverdata/serverpod_client.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key, required this.title});
