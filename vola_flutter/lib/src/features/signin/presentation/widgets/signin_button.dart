@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:serverpod_auth_client/module.dart';
-import 'package:vola_flutter/src/features/signin/presentation/widgets/signin_dialog.dart';
+import 'package:vola_flutter/src/config/values/colors.dart';
+import 'package:vola_flutter/src/config/values/text_strings.dart';
+import 'package:vola_flutter/src/features/signin/presentation/widgets/signin_bottom_sheed.dart';
 
 /// Sign in with Email button. When pressed, a pop-up window appears with fields for entering login, email and password.
 class SignInEmailButton extends StatefulWidget {
@@ -52,13 +55,13 @@ class SignInWithEmailButtonState extends State<SignInEmailButton> {
     return ElevatedButton.icon(
       style: widget.style ??
           ElevatedButton.styleFrom(
-            backgroundColor: Colors.lightBlue,
-            foregroundColor: Colors.white,
-            alignment: Alignment.centerLeft,
+            backgroundColor: vPrimaryColor,
+            foregroundColor: vLightColor,
+            alignment: Alignment.center,
             padding: const EdgeInsets.symmetric(horizontal: 16),
           ),
       onPressed: () {
-        showSignInWithEmailDialog(
+        showSignInEmailSheed(
           context: context,
           caller: widget.caller,
           maxPasswordLength: widget.maxPasswordLength,
@@ -70,8 +73,18 @@ class SignInWithEmailButtonState extends State<SignInEmailButton> {
           },
         );
       },
-      label: widget.label ?? const Text('Sign in with Email'),
-      icon: widget.icon ?? const Icon(Icons.email),
+      label: widget.label ??
+          Text(
+            vFieldEmail,
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                  color: vLightColor,
+                ),
+          ),
+      icon: widget.icon ??
+          const Icon(
+            IconsaxPlusBroken.sms,
+            size: 30,
+          ),
     );
   }
 }

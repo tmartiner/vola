@@ -21,6 +21,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     final isDark = VHelperFunctions.isDarkMode(context);
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      extendBody: true,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           NavigationRoutes().pushReplacement(context, "signUp");

@@ -1,5 +1,84 @@
 {
   "title": "Vola",
-  "welcometext": "Bienvenue chez Vola!\n\nPour commencer à explorer notre application, il vous suffit de cliquer sur Email. Nous sommes impatients de vous voir bientôt!",
-  "feed_title": "Explorer"
+  "welcometext": "Bienvenue sur Vola!\n\nPour commencer à explorer notre application, il suffit de cliquer sur la zone e-mail. Nous avons hâte de vous voir bientôt!",
+  "@welcometext": {
+    "description": "Un message avec un paramètre"
+  },
+
+  "feed_title": "Explorer",
+  "@feed_explore": {
+    "description": "Titre de la page"
+  },
+
+  "vFieldEmail": "E-mail",
+  "@vFieldEmail": {
+    "description": "Texte dans le formulaire"
+  },
+
+  "vFieldUsername": "Nom d'utilisateur",
+  "@vFieldUsername": {
+    "description": "Texte dans le formulaire"
+  },
+
+  "vButtonSignin": "S'inscrire",
+  "@ButtonSignin": {
+    "description": "Texte dans le bouton"
+  },
+  "vIm_here": "Je suis déjà là",
+  "@vIm_here": {
+    "description": "Texte dans le bouton"
+  },
+  "vButtonLogin": "Se connecter",
+  "@ButtonLogin": {
+    "description": "Texte dans le bouton"
+  },
+
+  "vPassField": "Mot de passe",
+  "@vPassField": {
+    "description": "Texte dans le formulaire"
+  },
+
+  "vForgotPass": "Mot de passe oublié",
+  "@vForgotPass": {
+    "description": "Texte dans le bouton"
+  },
+
+  "vCreateAccount": "Créer un compte",
+  "@vCreateAccount": {
+    "description": "Texte général"
+  },
+
+  "vLogI_Signup": "Connexion & Inscription",
+  "@vLogI_Signup": {
+    "description": "Texte général"
+  },
+
+  "vBack": "Retour",
+  "@vBack": {
+    "description": "Texte général"
+  },
+  "vResetPass": "Réinitialiser le mot de passe",
+  "@vResetPass": {
+    "description": "Texte général"
+  },
+  "vSendresetMail": "Veuillez vérifier votre e-mail. Nous vous avons envoyé un code pour vérifier votre adresse.",
+  "@vSendResetMail": {
+    "description": "Affiché lorsque l'e-mail de réinitialisation est envoyé"
+  },
+  "vValiCode": "Code de validation",
+  "@vValiCode": {
+    "description": "Affiché pour le code de validation"
+  },
+  "vSendCode": "Veuillez vérifier votre e-mail. Nous vous avons envoyé un code pour vérifier votre adresse.",
+  "@vSendCode": {
+    "description": "Affiché lorsque le code est envoyé"
+  },
+  "vNewPass": "Nouveau mot de passe",
+  "@vNewPass": {
+    "description": "Texte affiché"
+  },
+  "vlogin_sheed": "Connexion & Inscription",
+  "@vlogin_sheed": {
+    "description": "Titre de l'écran"
+  }
 }

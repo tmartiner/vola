@@ -4,8 +4,81 @@
   "@welcometext": {
     "description": "A message with a parameter"
   },
+
   "feed_title": "Explore",
-  "@wfeed_explore": {
+  "@feed_explore": {
     "description": "Title of the page"
+  },
+
+  "vFieldEmail": "Email",
+  "@vFieldEmail": {
+    "description": "Text in form"
+  },
+
+  "vFieldUsername": "Username",
+  "@vFieldUsername": {
+    "description": "Text in form"
+  },
+
+  "vButtonSignin": "Sign Up",
+  "@ButtonSignin": {
+    "description": "Text in Button"
+  },
+  "vIm_here": "I'm already here",
+  "@vIm_here": {
+    "description": "Text in Button"
+  },
+  "vButtonLogin": "Log In",
+  "@ButtonLogin": {
+    "description": "Text in Button"
+  },
+
+  "vPassField": "Password",
+  "@vPassField": {
+    "description": "Text in Form"
+  },
+
+  "vForgotPass": "Forgot Password",
+  "@vForgotPass": {
+    "description": "Text Button"
+  },
+
+  "vCreateAccount": "Create Account",
+  "@vCreateAccount": {
+    "description": "Text in general"
+  },
+
+  "vLogI_Signup": "Login & Signup",
+  "@vLogI_Signup": {
+    "description": "Text in general"
+  },
+
+  "vBack": "Back",
+  "@vBack": {
+    "description": "Text in general"
+  },
+  "vResetPass": "Reset Password",
+  "@vResetPass": {
+    "description": "Text in general"
+  },
+  "vSendresetMail": "Please check your email. We have sent you a code to verify your address.",
+  "@vSendResetMail": {
+    "description": "Displayed when the reset email is send"
+  },
+  "vValiCode": "Validation Code",
+  "@vValiCode": {
+    "description": "Displayed for validationcode"
+  },
+  "vSendCode": "Please check your email. We have sent you a code to verify your address.",
+  "@vSendCode": {
+    "description": "Displayed when the code is send"
+  },
+  "vNewPass": "New Password",
+  "@vNewPass": {
+    "description": "Displayed text"
+  },
+  "vlogin_sheed": "Log In & Sign Up",
+  "@vlogin_sheed": {
+    "description": "Sheed Title"
   }
 }

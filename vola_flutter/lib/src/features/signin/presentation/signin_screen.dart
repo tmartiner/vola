@@ -5,7 +5,7 @@ import 'package:vola_flutter/src/config/values/colors.dart';
 import 'package:vola_flutter/src/config/values/sizes.dart';
 import 'package:vola_flutter/src/features/feed_screen/presentation/settings_picker.dart';
 import 'package:vola_flutter/src/features/signin/presentation/widgets/signin_button.dart';
-import 'package:vola_flutter/src/serverdata/serverpod_client.dart';
+import 'package:vola_flutter/src/data/serverdata/serverpod_client.dart';
 import 'package:vola_flutter/src/utils/helpers/helper_functions.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
@@ -26,6 +26,8 @@ class _SignInPageState extends State<SignInPage> {
     final isDark = VHelperFunctions.isDarkMode(context);
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      extendBody: true,
       body: Stack(
         children: [
           Container(
@@ -71,46 +73,20 @@ class _SignInPageState extends State<SignInPage> {
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
                                   const Spacer(),
-                                  const Spacer(),
-                                  Text(
-                                    'welcometext'.tr(),
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyLarge!
-                                        .copyWith(
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .secondary,
-                                        ),
+                                  Expanded(
+                                    child: Text(
+                                      'welcometext'.tr(),
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyLarge!
+                                          .copyWith(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .secondary,
+                                          ),
+                                    ),
                                   ),
-                                  const Spacer(),
                                   SignInEmailButton(caller: client.modules.auth)
-                                  // SignInWithEmailButton(
-                                  //   icon: Icon(
-                                  //     IconsaxPlusBroken.sms_tracking,
-                                  //     size: Sizes.p32,
-                                  //     color: Theme.of(context)
-                                  //         .colorScheme
-                                  //         .onPrimary,
-                                  //   ),
-                                  //   label: Text(
-                                  //     vFieldEmail,
-                                  //     style: Theme.of(context)
-                                  //         .textTheme
-                                  //         .titleLarge!
-                                  //         .copyWith(
-                                  //           color: Theme.of(context)
-                                  //               .colorScheme
-                                  //               .onPrimary,
-                                  //         ),
-                                  //   ),
-                                  //   style: ButtonStyle(
-                                  //     backgroundColor:
-                                  //         MaterialStateProperty.all(
-                                  //             vPrimaryColor),
-                                  //   ),
-                                  //   caller: client.modules.auth,
-                                  // ),
                                 ],
                               ),
                             ),

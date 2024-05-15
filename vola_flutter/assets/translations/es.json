@@ -1,5 +1,84 @@
 {
   "title": "Vola",
-  "welcometext": "¡Bienvenido a Vola!\n\nPara empezar a explorar nuestra aplicación, simplemente haz clic en el área de correo electrónico. ¡Esperamos verte pronto!",
-  "feed_title": "Explorar"
+  "welcometext": "¡Bienvenido a Vola!\n\nPara comenzar a explorar nuestra aplicación, simplemente haga clic en el área de correo electrónico. ¡Esperamos verte pronto!",
+  "@welcometext": {
+    "description": "Un mensaje con un parámetro"
+  },
+
+  "feed_title": "Explorar",
+  "@feed_explore": {
+    "description": "Título de la página"
+  },
+
+  "vFieldEmail": "Correo electrónico",
+  "@vFieldEmail": {
+    "description": "Texto en el formulario"
+  },
+
+  "vFieldUsername": "Nombre de usuario",
+  "@vFieldUsername": {
+    "description": "Texto en el formulario"
+  },
+
+  "vButtonSignin": "Registrarse",
+  "@ButtonSignin": {
+    "description": "Texto en el botón"
+  },
+  "vIm_here": "Ya estoy aquí",
+  "@vIm_here": {
+    "description": "Texto en el botón"
+  },
+  "vButtonLogin": "Iniciar sesión",
+  "@ButtonLogin": {
+    "description": "Texto en el botón"
+  },
+
+  "vPassField": "Contraseña",
+  "@vPassField": {
+    "description": "Texto en el formulario"
+  },
+
+  "vForgotPass": "Olvidé mi contraseña",
+  "@vForgotPass": {
+    "description": "Texto en el botón"
+  },
+
+  "vCreateAccount": "Crear cuenta",
+  "@vCreateAccount": {
+    "description": "Texto en general"
+  },
+
+  "vLogI_Signup": "Iniciar sesión y registrarse",
+  "@vLogI_Signup": {
+    "description": "Texto en general"
+  },
+
+  "vBack": "Volver",
+  "@vBack": {
+    "description": "Texto en general"
+  },
+  "vResetPass": "Restablecer contraseña",
+  "@vResetPass": {
+    "description": "Texto en general"
+  },
+  "vSendresetMail": "Por favor, revise su correo electrónico. Le hemos enviado un código para verificar su dirección.",
+  "@vSendResetMail": {
+    "description": "Se muestra cuando se envía el correo electrónico de restablecimiento"
+  },
+  "vValiCode": "Código de validación",
+  "@vValiCode": {
+    "description": "Se muestra para el código de validación"
+  },
+  "vSendCode": "Por favor, revise su correo electrónico. Le hemos enviado un código para verificar su dirección.",
+  "@vSendCode": {
+    "description": "Se muestra cuando se envía el código"
+  },
+  "vNewPass": "Nueva contraseña",
+  "@vNewPass": {
+    "description": "Texto mostrado"
+  },
+  "vlogin_sheed": "Iniciar sesión y registrarse",
+  "@vlogin_sheed": {
+    "description": "Título de la pantalla"
+  }
 }

@@ -6,7 +6,7 @@ import 'package:vola_flutter/src/config/values/route/route_handler.dart';
 import 'package:vola_flutter/src/features/feed_screen/presentation/feed_screen.dart';
 import 'package:vola_flutter/src/features/signin/presentation/signin_screen.dart';
 import 'package:vola_flutter/src/features/welcome/presentation/welcome_screen.dart';
-import 'package:vola_flutter/src/serverdata/serverpod_client.dart';
+import 'package:vola_flutter/src/data/serverdata/serverpod_client.dart';
 
 class App extends StatefulWidget {
   const App({super.key});

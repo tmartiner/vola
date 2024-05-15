@@ -1,5 +1,84 @@
 {
   "title": "Vola",
-  "welcometext": "Willkommen bei Vola!\n\nUm mit unserer App zu beginnen, klicken Sie einfach auf Email. Wir freuen uns darauf, Sie bald zu sehen!",
-  "feed_title": "Erkunden"
+  "welcometext": "Willkommen bei Vola!\n\nUm unsere App zu erkunden, klicken Sie einfach auf den E-Mail-Bereich. Wir freuen uns darauf, Sie bald zu sehen!",
+  "@welcometext": {
+    "description": "Eine Nachricht mit einem Parameter"
+  },
+
+  "feed_title": "Erkunden",
+  "@feed_explore": {
+    "description": "Titel der Seite"
+  },
+
+  "vFieldEmail": "E-Mail",
+  "@vFieldEmail": {
+    "description": "Text im Formular"
+  },
+
+  "vFieldUsername": "Benutzername",
+  "@vFieldUsername": {
+    "description": "Text im Formular"
+  },
+
+  "vButtonSignin": "Registrieren",
+  "@ButtonSignin": {
+    "description": "Text in Button"
+  },
+  "vIm_here": "Ich bin bereits hier",
+  "@vIm_here": {
+    "description": "Text in Button"
+  },
+  "vButtonLogin": "Anmelden",
+  "@ButtonLogin": {
+    "description": "Text in Button"
+  },
+
+  "vPassField": "Passwort",
+  "@vPassField": {
+    "description": "Text im Formular"
+  },
+
+  "vForgotPass": "Passwort vergessen",
+  "@vForgotPass": {
+    "description": "Text Button"
+  },
+
+  "vCreateAccount": "Konto erstellen",
+  "@vCreateAccount": {
+    "description": "Text im Allgemeinen"
+  },
+
+  "vLogI_Signup": "Anmelden & Registrieren",
+  "@vLogI_Signup": {
+    "description": "Text im Allgemeinen"
+  },
+
+  "vBack": "Zurück",
+  "@vBack": {
+    "description": "Text im Allgemeinen"
+  },
+  "vResetPass": "Passwort zurücksetzen",
+  "@vResetPass": {
+    "description": "Text im Allgemeinen"
+  },
+  "vSendresetMail": "Bitte überprüfen Sie Ihre E-Mails. Wir haben Ihnen einen Code zur Überprüfung Ihrer Adresse gesendet.",
+  "@vSendResetMail": {
+    "description": "Angezeigt, wenn die E-Mail zum Zurücksetzen gesendet wird"
+  },
+  "vValiCode": "Validierungscode",
+  "@vValiCode": {
+    "description": "Angezeigt für Validierungscode"
+  },
+  "vSendCode": "Bitte überprüfen Sie Ihre E-Mails. Wir haben Ihnen einen Code zur Überprüfung Ihrer Adresse gesendet.",
+  "@vSendCode": {
+    "description": "Angezeigt, wenn der Code gesendet wird"
+  },
+  "vNewPass": "Neues Passwort",
+  "@vNewPass": {
+    "description": "Angezeigter Text"
+  },
+  "vlogin_sheed": "Anmelden & Registrieren",
+  "@vlogin_sheed": {
+    "description": "Titel des Schirms"
+  }
 }
